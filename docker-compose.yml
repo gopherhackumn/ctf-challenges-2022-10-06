@@ -13,7 +13,7 @@ services:
     volumes:
       - ./php:/var/www/html:ro
 
-  mysql:
+  db:
     image: mariadb
     networks: [php-app]
     restart: always

@@ -22,7 +22,7 @@
       ?>
 
       <form method="post">
-        Input secret: <input name="secret" /><br />
+        Input secret: <input name="secret" autocomplete="off" /><br />
         <input type="submit" name="submit" />
       </form>
 
