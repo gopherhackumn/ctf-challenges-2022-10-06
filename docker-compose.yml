@@ -2,12 +2,13 @@ version: "3"
 
 services:
   php:
-    build: php
+    image: php:7.2-apache
     networks: [php-app]
     restart: always
     depends_on: [mysql]
     ports: ["5010:80"]
     environment:
+      NATAS06: gopher{15384ec648c6f3bc335cd959877e01f5}
       DB_PASSWORD: "${DB_PASSWORD}"
     volumes:
       - ./php:/var/www/html:ro
