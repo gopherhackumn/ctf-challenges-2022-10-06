@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  php:
+    build: php
+    networks: [php-app]
+    restart: always
+    depends_on: [mysql]
+    ports: ["5010:80"]
+    environment:
+      DB_PASSWORD: "${DB_PASSWORD}"
+    volumes:
+      - ./php:/var/www/html
+
+  mysql:
+    image: mariadb
+    networks: [php-app]
+    restart: always
+    expose: [3306]
+    ports: []
+    environment:
+      MARIADB_ROOT_PASSWORD: "${DB_PASSWORD}"
+
+networks:
+  php-app:
