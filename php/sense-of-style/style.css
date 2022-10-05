@@ -1,47 +1,21 @@
-body {
-  font-family: sans-serif;
-  max-width: 980px;
-  margin: auto;
+html {
+  height: 100vh;
+  margin: 0;
 
-  /* ff 3.6+ */
-  background: -moz-radial-gradient(
-    circle at 49% 41%,
-    rgba(83, 114, 162, 0) 29%,
-    rgba(212, 0, 208, 1) 63%,
-    rgba(0, 62, 212, 1) 100%
-  );
-
-  /* safari 5.1+,chrome 10+ */
-  background: -webkit-radial-gradient(
-    circle at 49% 41%,
-    rgba(83, 114, 162, 0) 29%,
-    rgba(212, 0, 208, 1) 63%,
-    rgba(0, 62, 212, 1) 100%
-  );
-
-  /* opera 11.10+ */
-  background: -o-radial-gradient(
-    circle at 49% 41%,
-    rgba(83, 114, 162, 0) 29%,
-    rgba(212, 0, 208, 1) 63%,
-    rgba(0, 62, 212, 1) 100%
-  );
-
-  /* ie 10+ */
-  background: -ms-radial-gradient(
-    circle at 49% 41%,
-    rgba(83, 114, 162, 0) 29%,
-    rgba(212, 0, 208, 1) 63%,
-    rgba(0, 62, 212, 1) 100%
-  );
-
-  /* global 92%+ browsers support */
   background: radial-gradient(
     circle at 49% 41%,
-    rgba(83, 114, 162, 0) 29%,
-    rgba(212, 0, 208, 1) 63%,
-    rgba(0, 62, 212, 1) 100%
+    rgba(140, 207, 248, 0) 0%,
+    rgba(212, 123, 208, 1) 33%,
+    rgba(62, 170, 212, 1) 66%,
+    rgba(62, 212, 170, 1) 100%
   );
+}
+
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  max-width: 980px;
+  margin: auto;
 }
 
 /* The flag is: gopher{just_some_harmless_css} */
