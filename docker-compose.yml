@@ -10,7 +10,7 @@ services:
     environment:
       DB_PASSWORD: "${DB_PASSWORD}"
     volumes:
-      - ./php:/var/www/html
+      - ./php:/var/www/html:ro
 
   mysql:
     image: mariadb
