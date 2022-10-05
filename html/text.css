@@ -1,0 +1,10 @@
+h1 {
+	  font-size: 72px;
+	    background: -webkit-linear-gradient(26deg, rgba(255, 0, 0, 0.85) 3%, rgba(255, 197, 0, 1) 16%, rgba(228, 255, 0, 1) 27%, rgba(6, 255, 0, 1) 40%, rgba(0, 255, 252, 1) 48%, rgba(0, 39, 255, 1) 56%, rgba(134, 0, 212, 1) 63%, rgba(183, 58, 167, 1) 72%, rgba(255, 0, 204, 1) 85%, rgba(212, 0, 65, 1) 100%);
+	      -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
+	}
+
+gopherhack{
+	key: gopher{#FFFuck_you_michael};
+}
