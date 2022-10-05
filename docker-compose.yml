@@ -2,25 +2,27 @@ version: "3"
 
 services:
   php:
-    image: php:7.2-apache
+    build: php
     networks: [php-app]
     restart: always
-    depends_on: [mysql]
+    depends_on: [db]
     ports: ["5010:80"]
     environment:
       NATAS06: gopher{15384ec648c6f3bc335cd959877e01f5}
-      DB_PASSWORD: "${DB_PASSWORD}"
     volumes:
       - ./php:/var/www/html:ro
 
   db:
-    image: mariadb
+    build: mysql-init
     networks: [php-app]
     restart: always
     expose: [3306]
     ports: []
     environment:
-      MARIADB_ROOT_PASSWORD: "${DB_PASSWORD}"
+      MARIADB_ROOT_PASSWORD: 0127357d4b5bf09a1c6f856ae39ef44b
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d:ro
 
 networks:
   php-app:

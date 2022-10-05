@@ -16,6 +16,8 @@
       );
       */
 
+      include "./secret.php";
+
       if(array_key_exists("username", $_REQUEST)) {
         $link = mysqli_connect('db', 'natas15', 'TTkaI7AWG4iDERztBcEyKV7kRXH1EZRB');
         mysqli_select_db($link, 'natas15');
