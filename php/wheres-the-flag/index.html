@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Where's the flag?</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <h1>Where's the flag?</h1>
+
+    <div>
+      Click here to fetch the flag from the server:
+
+      <div id="download">
+        <button id="fetch" disabled>Fetch</button>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const fetchBtn = document.getElementById("fetch");
+      const downloadArea = document.getElementById("download");
+
+      fetchBtn.addEventListener("click", (_) => {
+        downloadArea.innerText = "Downloading...";
+
+        setTimeout((_) => {
+          fetch("./get-flag.php", {
+            method: "POST",
+          }).then((res) => {
+            if (res.status !== 200) {
+              downloadArea.innerHTML =
+                "<span style='color: red'>Download unsuccessful.</span>";
+              return;
+            }
+            downloadArea.innerHTML =
+              "<span style='color: green'>Download successful!</span>";
+          });
+        }, 1000);
+      });
+
+      fetchBtn.disabled = false;
+    </script>
+  </body>
+</html>
